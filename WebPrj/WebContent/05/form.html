@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<form action="#" method="post" enctype="multipart/form-data">
+	
+	<fieldset>
+		<legend>폼 입력양식 1</legend>
+		
+		<label>이름<input autofocus type="text" size="50" maxlength="20" placeholder="heojk"></label><br>
+		
+		<label>체크<input type="checkbox"></label><br>
+		
+		<label for="check">선택2</label>
+		<input id="check" type="checkbox"><br>
+		
+		비밀번호 <input type="password"><br>
+		
+		이메일 <input type="email" required><br>
+		
+		하나만 선택 : 하나 <input type="radio" name="num">, 
+				둘<input type="radio" name="num" checked>, 
+				셋<input type="radio" name="num"><br>
+		
+		숫자 <input type="number" min=-1 max=5 step=0.1 value=3><br>
+		범위 <input type="range"><br>
+		날짜 <input type="date"><br>
+		시간 <input type="time"><br>
+		
+		첨부파일 <input type="file"><br>
+		
+		<!-- 공백도 인식하기 때문에 시작에 공백을 안넣는게 좋음 -->
+		<textarea rows="5" cols="50">
+		</textarea><br>
+		
+		<select name="deptid">
+			<!-- option태그는 닫는태그 있어도되고 없어도된다. -->
+			<!-- value를 넣게 되면 서버에 전달되는 값을 의미 -->
+			<!-- size는 한번에 보여질 개수 (default는 4) -->
+			<option value="1">값1
+			<option value="2">값2
+			<option value="3" selected>값3
+			<option>값4
+			<option>값5
+			<option>값6
+			<option>값7			
+		</select><br>
+		
+		<input type="text" list="dlist">
+		<datalist id="dlist">
+			<option>안녕하세요.
+			<option>Hello
+			<option>123456789
+		</datalist><br>	
+		
+		<input type="reset" value="취소">
+		<input type="submit" value="전송">
+		
+		<input type="button" value="버튼1">
+		<input type="image" src="../images/photo1.jpg">
+		
+	</fieldset>
+	
+	<fieldset>
+		<legend>폼 입력양식 2</legend>
+		<input type="text">
+	</fieldset>
+	
+	</form>
+</body>
+</html>
