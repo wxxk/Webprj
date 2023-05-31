@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+h1 {
+	color: red;
+	}
+	
+
+div {
+	border: 1px solid #222;
+}
+
+#container {
+	width: 600px;
+	border: none;
+}
+
+li {
+	list-style-type: inherit;
+}
+
+table {
+	border: 1px solid black;	
+	border-collapse: collapse;
+}
+
+td, th {
+	border: 1px solid black;
+	padding: 20px;
+	text-align: center;
+}
