@@ -1,0 +1,20 @@
+@charset "UTF-8";
+body {
+	margin: 0;
+	padding: 10px;
+	font-size: 0.917em;
+}
+
+#middle_content {
+	width: 800px;
+	height: 100%;
+	float: left;		
+}
+
+ul {
+	list-style: none;
+}
+
+.cur_loc {
+	border-bottom: 1px solid #e1e1e1;
+}
