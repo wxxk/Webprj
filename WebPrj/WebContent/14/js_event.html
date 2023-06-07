@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button" value="Hello">
+	
+	<script type="text/javascript">
+		var btn = document.querySelector("input");
+		console.log(btn);
+		console.log(btn.onclick);
+		btn.onclick = function() {
+			console.log("Hello");
+		}
+	</script>
+</body>
+</html>
