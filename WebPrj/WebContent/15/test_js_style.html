@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		div {
+			width:200px; height: 200px;
+			border: 1px solid black;
+			background-color: cyan;
+		}
+		
+		.mouseover {
+			background-color: blue;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div id="first"></div>
+	<div id="second"></div>
+	
+	<script>
+		var secondEl = document.querySelector("#second");
+		secondEl.onmouseover = function(event) {
+			secondEl.setAttribute("class", "mouseover");
+		}
+		secondEl.onmouseout = () => {
+			secondEl.removeAttribute("class");
+		}
+	
+	
+		var firstEl = document.querySelector("#first");
+		firstEl.onmouseover = function(event) {
+			firstEl.style.backgroundColor = "blue";
+			firstEl.style.borderRadius = "50%";
+		}
+		firstEl.addEventListener("mouseout", ()=> {
+			firstEl.style.backgroundColor = "cyan";
+			firstEl.style.borderRadius = "";
+		})
+	</script>
+</body>
+</html>

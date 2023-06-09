@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<input type="text"> <input type="button" value="추가"><br>
+	<ul>
+		
+	</ul>
+	
+	<script type="text/javascript">
+		var textEl = document.querySelector("[type='text']")
+		var btnEl = document.querySelector("[type='button']")
+		var ulEl = document.querySelector("ul");
+		btnEl.onclick = () => {
+			let liEl = document.createElement("li");
+			liEl.textContent = textEl.value;
+			ulEl.appendChild(liEl);
+		}
+		
+		/*
+		btnEl.onclick = () => {
+			ulEl.innerHTML = ulEl.innerHTML + "<li>" + textEl.value;
+		}
+		*/
+		
+		
+	</script>
+</body>
+</html>

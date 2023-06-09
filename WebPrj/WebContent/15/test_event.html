@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		div {
+			width: 200px;
+			height: 100px;
+			background-color: #dddddd;
+			margin: 15px;	
+		}
+		button {
+			padding: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(event) {
+			var green = document.querySelector("#green");
+			var orange = document.querySelector("#orange");
+			var purple = document.querySelector("#purple");
+			var div = document.querySelector("div");
+			
+			green.onclick = function(event) {
+				div.style.backgroundColor = "green";
+			}
+			orange.onclick = function(event) {
+				div.style.backgroundColor = "orange";
+			}
+			/*
+			purple.onclick = function(event) {
+				div.style.backgroundColor = "purple";
+			}
+			*/
+			purple.addEventListener("click", function(event) {
+				div.style.backgroundColor = "purple";
+				event.stopPropagation();
+			}, true)	// 캡쳐링, 버블링의 이유로 addEventListener사용
+			
+			document.querySelector('a').onclick = function(event) {
+				alert('qwerty')
+				event.preventDefault(); //HTML 문서의 기본이벤트를 실행시키지 마라
+			}
+		}
+	</script>
+</head>
+<body>
+	<a href="https://www.naver.com">네이버</a>
+	<button id="green">GREEN</button>
+	<button id="orange">ORANGE</button>
+	<button id="purple">PURPLE</button>
+	<div>
+			
+	</div>
+</body>
+</html>

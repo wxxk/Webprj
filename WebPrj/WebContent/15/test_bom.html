@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>윈도우객체 예제입니다.</h1>
+	<input type="button" id="open" value="http://javaspecialist.co.kr"><br>
+	<input type="button" id="back" value="이전페이지"><br>
+	<input type="button" id="location" value="http://javaspecialist.co.kr"><br>
+	<input type="button" id="navigator" value="브라우저 정보"><br>
+	<input type="button" id="screen" value="화면정보"><br>
+	<div id="result"></div>
+	
+	
+	<script>
+		document.querySelector("#open").onclick = function(event) {
+			window.open(this.value, "팝업창", "width=500, height=500, menubar=no, status=no, toolbar=no");
+		}
+		document.querySelector("#back").onclick = function(event) {
+			history.back(-1);
+		}
+		document.querySelector("#location").onclick = function(event) {
+			location.href = this.value;
+		}
+		document.querySelector("#navigator").onclick = function(event) {
+			document.querySelector("#result").textContent = navigator.appName;
+		}
+		document.querySelector("#screen").onclick = function(event) {
+			var screenInfo = screen.width + ", " + screen.height + " : ";
+			screenInfo += screen.availWidth + ", " + screen.availHeight;
+			document.querySelector("#result").textContent = screenInfo;
+		}
+	</script> 
+</body>
+</html>

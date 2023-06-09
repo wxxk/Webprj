@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<h1>DOM Sample</h1>
+	<input type="text"><input type="button" value="입력">
+	<div id="result"></div>
+	
+	<script type="text/javascript">
+		document.querySelector("[type=button]").onclick = function(event) {
+			let text = document.querySelector("[type=text]").value;
+			document.querySelector("#result").textContent = text;
+		}
+		var count = 0;
+		document.querySelector("[type=text]").onkeyup = function(event) {
+			document.querySelector("#result").textContent = this.value.length;
+		}
+	</script>
+</body>
+</html>
