@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+	<script>
+		$(function() {
+			var inputEl = $("[name=empid]");
+			var spanEl = $(".empname");
+			
+			$("input[value=Search]").click(function(event) {
+			$.ajax({
+					type: "GET",
+					url: "res.jsp?empid=" + inputEl.val(),	// 앞 요청 파라미터, 뒤 위에 empid
+					success: function(result, status) { // 요청결과, 상태코드
+						spanEl.text(result);
+					}	
+				});
+			}); 
+		});
+	</script>
+</head>
+<body>
+	<p>사원의 이름을 조회하려면 사원번호를 입력하세요.</p>
+	<p>사원번호 <input type="text" name="empid">
+			<input type="button" value="Search"></p>
+	<p>조회한 사원의 이름: <span class="empname"></span></p>
+</body>
+</html>
